@@ -1,0 +1,58 @@
+
+.titulo{
+      
+    text-align: center; 
+}
+body{
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    background: linear-gradient(#534f8a, #695be6);
+}
+.buscar{
+    margin-top: 120px;
+    position: absolute;
+    padding: 5px;
+}
+.buscar input{
+    width: 0px;
+    height: 40px;
+    padding: 0 20px;
+    font-size: 18px;
+    color: #000;
+    outline: none;
+    border: 1px solid silver;
+    border-radius: 30px;
+    transition: all 0.6s ease;
+}
+.btnBuscador{
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: #440088;
+    width: 55px;
+    height: 55px;
+    line-height: 55px;
+    text-align: center;
+    color: wheat;
+    font-size: 20px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.buscar:hover input{
+    width: 240px;
+}
+.buscar input:focus{
+    width: 240px;
+}
+
+.cardProducto{
+    margin-top: 200px;
+    position: absolute;
+    padding: 5px;
+}
+
+.error{
+    color: rgb(161, 50, 50);
+    background: #000;
+}
