@@ -9,7 +9,7 @@
 [Backend](https://github.com/jorgeluisrupay/BsaleBackEnd/
 "Repositorio del Backend")
 
-[FronotEnd](https://github.com/jorgeluisrupay/BsaleFrontEnd/
+[FrontEnd](https://github.com/jorgeluisrupay/BsaleFrontEnd/
 "Repositorio del FrontEnd")
 
 ### Deploy de las Aplicaciones
@@ -17,5 +17,5 @@
 [Backend](https://bsalenode.herokuapp.com/productos
 "Deploy del Backend")
 
-[FronotEnd](https://bsaletest-jorgeluisrupay.netlify.app
+[FrontEnd](https://bsaletest-jorgeluisrupay.netlify.app
 "Deploy del FrontEnd")
