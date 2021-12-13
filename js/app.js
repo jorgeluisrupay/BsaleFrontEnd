@@ -6,7 +6,7 @@ const fetchData = async () => {
     try {
         const res = await fetch('https://bsalenode.herokuapp.com/productos')
         const data = await res.json()
-        console.log(data)
+        //console.log(data)
         pintarProductos(data)
         detectarBotones(data)
     } catch (error) {
@@ -20,14 +20,26 @@ const pintarProductos = (data) => {
     const fragment = document.createDocumentFragment()
     // console.log(template)
     data.forEach(producto => {
-        // console.log(producto)
-        template.querySelector('img').setAttribute('src', producto.url_image)
-        template.querySelector('img').setAttribute('alt', producto.name)
-        template.querySelector('h5').textContent = producto.name
-        template.querySelector('p span').textContent = producto.price
-        template.querySelector('button').dataset.id = producto.id
-        const clone = template.cloneNode(true)
-        fragment.appendChild(clone)
+
+        if (producto.url_image) {
+            
+            // console.log(producto)
+            template.querySelector('img').setAttribute('src', producto.url_image)
+            template.querySelector('img').setAttribute('alt', producto.name)
+            template.querySelector('h5').textContent = producto.name
+            template.querySelector('p span').textContent = producto.price
+            template.querySelector('button').dataset.id = producto.id
+            const clone = template.cloneNode(true)
+            fragment.appendChild(clone)
+        }else{
+            template.querySelector('img').setAttribute('src', '../assets/bsaleImagen.gif')
+            template.querySelector('img').setAttribute('alt', producto.name)
+            template.querySelector('h5').textContent = producto.name
+            template.querySelector('p span').textContent = producto.price
+            template.querySelector('button').dataset.id = producto.id
+            const clone = template.cloneNode(true)
+            fragment.appendChild(clone)
+        }
     })
     contendorProductos.appendChild(fragment)
 }
